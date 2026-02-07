@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Zero Bloat UI</title>
+    
+    <link href="assets/css/fonts.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-500 min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <div class="fixed inset-0 pointer-events-none z-0 bg-grid"></div>
+    
+    <div class="fixed top-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob mix-blend-multiply dark:mix-blend-screen pointer-events-none"></div>
+    <div class="fixed bottom-0 left-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-blob animation-delay-2000 mix-blend-multiply dark:mix-blend-screen pointer-events-none"></div>
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tighter flex items-center gap-2 group">
+                <img src="https://placehold.co/100x100/2563eb/ffffff?text=Z" alt="Logo" class="w-8 h-8 rounded-lg group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-blue-500/20">
+                <div>Zero<span class="text-blue-600 dark:text-blue-400">Bloat</span>UI</div>
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
+                <a href="index.html" class="relative group py-1"><span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Home</span><span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="catalog.html" class="relative group py-1"><span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Templates</span><span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="how-it-works.html" class="relative group py-1"><span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Documentation</span><span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="contact.html" class="relative group py-1"><span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Support</span><span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span></a>
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-4">
+                <button onclick="toggleTheme()" class="w-9 h-9 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center transition hover:scale-110"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block"></i></button>
+                <a href="catalog.html" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-full transition shadow-lg shadow-blue-500/30 hover:-translate-y-0.5">Browse Shop</a>
+            </div>
+            <button class="lg:hidden text-2xl text-slate-700 dark:text-slate-200 focus:outline-none" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full glass-nav border-t border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-2 shadow-2xl z-50 animate-fade-in-up origin-top">
+            <a href="index.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group"><div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-home"></i></div><span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">Home</span></a>
+            <a href="catalog.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group"><div class="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-layer-group"></i></div><span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-purple-600 dark:group-hover:text-purple-400">Templates</span></a>
+            <a href="how-it-works.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group"><div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-book"></i></div><span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">Documentation</span></a>
+            <a href="contact.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group"><div class="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-headset"></i></div><span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-orange-600 dark:group-hover:text-orange-400">Support</span></a>
+            <div class="h-px bg-slate-200 dark:bg-slate-800 my-2"></div>
+            <div><p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 pl-1">Appearance</p><div class="grid grid-cols-2 gap-3"><button id="mobile-light-btn" onclick="setTheme('light')" class="flex items-center justify-center gap-2 p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all bg-white dark:bg-slate-900 text-slate-500 hover:text-blue-500 font-bold text-sm"><i class="fas fa-sun text-yellow-500"></i> Light</button><button id="mobile-dark-btn" onclick="setTheme('dark')" class="flex items-center justify-center gap-2 p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all bg-white dark:bg-slate-900 text-slate-500 hover:text-blue-500 font-bold text-sm"><i class="fas fa-moon text-blue-500"></i> Dark</button></div></div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-24 md:pt-32 relative z-10 container mx-auto px-6 py-12">
+        
+        <section class="text-center mb-20 animate-fade-in-up">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-6 hover:scale-105 transition-transform cursor-default border border-blue-200 dark:border-blue-800">
+                <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> Legal Agreement
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Terms of <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Service</span></h1>
+            <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                By downloading or using our products, you agree to the terms below. We keep it simple and fair.
+            </p>
+        </section>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20">
+            
+            <div class="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-2xl hover:border-blue-500/30 transition-all duration-300 group cursor-default animate-fade-in-up" style="animation-delay: 100ms;">
+                <div class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:rotate-12 transition-transform duration-300">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">License Grant</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    You get a non-exclusive, non-transferable royalty-free license to use the templates for personal and commercial projects.
+                </p>
+            </div>
+
+            <div class="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-2xl hover:border-red-500/30 transition-all duration-300 group cursor-default animate-fade-in-up" style="animation-delay: 200ms;">
+                <div class="w-14 h-14 rounded-2xl bg-red-100 dark:bg-red-900/30 text-red-600 flex items-center justify-center text-2xl mb-6 group-hover:-rotate-12 transition-transform duration-300">
+                    <i class="fas fa-ban"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Restrictions</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    You cannot resell, redistribute, or offer the templates as-is to any third party. The license is for your use only.
+                </p>
+            </div>
+
+            <div class="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-2xl hover:border-emerald-500/30 transition-all duration-300 group cursor-default animate-fade-in-up" style="animation-delay: 300ms;">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Payments</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    Payments are one-time and processed securely via Lemon Squeezy. We do not store your credit card information.
+                </p>
+            </div>
+
+            <div class="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-2xl hover:border-orange-500/30 transition-all duration-300 group cursor-default animate-fade-in-up" style="animation-delay: 400ms;">
+                <div class="w-14 h-14 rounded-2xl bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center text-2xl mb-6 group-hover:rotate-12 transition-transform duration-300">
+                    <i class="fas fa-life-ring"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">Support Scope</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    We provide support for technical issues with the template itself. We do not teach you how to code or support 3rd party plugins.
+                </p>
+            </div>
+
+            <div class="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-2xl hover:border-purple-500/30 transition-all duration-300 group cursor-default animate-fade-in-up" style="animation-delay: 500ms;">
+                <div class="w-14 h-14 rounded-2xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center text-2xl mb-6 group-hover:-rotate-12 transition-transform duration-300">
+                    <i class="fas fa-copyright"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Ownership</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    Zero Bloat UI retains ownership of the source code and assets. You purchase a license to use them, not the copyright.
+                </p>
+            </div>
+
+            <div class="glass p-8 rounded-3xl hover:-translate-y-2 hover:shadow-2xl hover:border-cyan-500/30 transition-all duration-300 group cursor-default animate-fade-in-up" style="animation-delay: 600ms;">
+                <div class="w-14 h-14 rounded-2xl bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 flex items-center justify-center text-2xl mb-6 group-hover:spin-slow transition-transform duration-300">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Updates</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 700ms;">
+            <div class="glass p-8 rounded-3xl border border-slate-200 dark:border-slate-800">
+                <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
+                    <i class="fas fa-star text-yellow-500"></i> TL;DR Summary
+                </h3>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+                        <i class="fas fa-check-circle text-green-500 text-xl group-hover:scale-125 transition-transform"></i>
+                        <span class="text-slate-600 dark:text-slate-300 font-medium">You can use templates for unlimited client projects.</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+                        <i class="fas fa-check-circle text-green-500 text-xl group-hover:scale-125 transition-transform"></i>
+                        <span class="text-slate-600 dark:text-slate-300 font-medium">One-time payment, lifetime access.</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+                        <i class="fas fa-times-circle text-red-500 text-xl group-hover:scale-125 transition-transform"></i>
+                        <span class="text-slate-600 dark:text-slate-300 font-medium">Do not resell or redistribute the code.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 text-xs text-slate-400">
+                Last Updated: February 7, 2026
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md relative z-10">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <a href="index.html" class="text-2xl font-extrabold tracking-tighter flex items-center gap-2 group">
+                        <img src="https://placehold.co/100x100/2563eb/ffffff?text=Z" alt="Logo" class="w-8 h-8 rounded-lg group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-blue-500/20">
+                        <div>Zero<span class="text-blue-600 dark:text-blue-400">Bloat</span>UI</div>
+                    </a>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Premium Tailwind CSS templates for modern startups. Save hundreds of hours on UI development.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-slate-400 hover:text-blue-600 transition-all duration-300 hover:-translate-y-1"><i class="fab fa-twitter text-lg"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1"><i class="fab fa-github text-lg"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-blue-500 transition-all duration-300 hover:-translate-y-1"><i class="fab fa-discord text-lg"></i></a>
+                    </div>
+                </div>
+                <div><h4 class="font-bold text-slate-900 dark:text-white mb-6">Products</h4><ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400"><li><a href="catalog.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">All Templates</a></li><li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Free Kits</a></li><li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Figma Assets</a></li></ul></div>
+                <div><h4 class="font-bold text-slate-900 dark:text-white mb-6">Support</h4><ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400"><li><a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Help Center</a></li><li><a href="how-it-works.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Documentation</a></li><li><a href="license.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">License Terms</a></li></ul></div>
+                <div><h4 class="font-bold text-slate-900 dark:text-white mb-6">Legal</h4><ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400"><li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Privacy Policy</a></li><li><a href="terms.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Terms of Service</a></li><li><a href="refund.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Refund Policy</a></li></ul></div>
+            </div>
+            <div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-xs text-slate-500 text-center md:text-left flex items-center gap-1">&copy; 2026 Zero Bloat UI. Designed in Manila.</div>
+                <div class="flex gap-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <i class="fab fa-cc-visa text-2xl text-blue-600 dark:text-blue-400 hover:text-blue-700 transition-colors"></i>
+                    <i class="fab fa-cc-mastercard text-2xl text-orange-500 hover:text-orange-600 transition-colors"></i>
+                    <i class="fab fa-paypal text-2xl text-[#003087] dark:text-[#009cde] hover:brightness-110 transition-all"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

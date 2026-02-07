@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPro v2 | Zero Bloat UI</title>
+    
+    <link href="assets/css/fonts.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-500 min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <div class="fixed inset-0 pointer-events-none z-0 bg-grid"></div>
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <a href="index.html" class="text-2xl font-extrabold tracking-tighter flex items-center gap-2 group">
+                <img src="https://placehold.co/100x100/2563eb/ffffff?text=Z" alt="Logo" class="w-8 h-8 rounded-lg group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-blue-500/20">
+                <div>Zero<span class="text-blue-600 dark:text-blue-400">Bloat</span>UI</div>
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
+                <a href="index.html" class="relative group py-1">
+                    <span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Home</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="catalog.html" class="relative group py-1">
+                    <span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Templates</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="how-it-works.html" class="relative group py-1">
+                    <span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Documentation</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="contact.html" class="relative group py-1">
+                    <span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Support</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-4">
+                <button onclick="toggleTheme()" class="w-9 h-9 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center transition hover:scale-110">
+                    <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block"></i>
+                </button>
+                <a href="catalog.html" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-full transition shadow-lg shadow-blue-500/30 hover:-translate-y-0.5">Browse Shop</a>
+            </div>
+
+            <button class="lg:hidden text-2xl text-slate-700 dark:text-slate-200 focus:outline-none" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full glass-nav border-t border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-2 shadow-2xl z-50 animate-fade-in-up origin-top">
+            
+            <a href="index.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+                <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-home"></i></div>
+                <span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">Home</span>
+            </a>
+            
+            <a href="catalog.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+                <div class="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-layer-group"></i></div>
+                <span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-purple-600 dark:group-hover:text-purple-400">Templates</span>
+            </a>
+
+            <a href="how-it-works.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+                <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-book"></i></div>
+                <span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">Documentation</span>
+            </a>
+
+            <a href="contact.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+                <div class="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-headset"></i></div>
+                <span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-orange-600 dark:group-hover:text-orange-400">Support</span>
+            </a>
+
+            <div class="h-px bg-slate-200 dark:bg-slate-800 my-2"></div>
+
+            <div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 pl-1">Appearance</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <button id="mobile-light-btn" onclick="setTheme('light')" class="flex items-center justify-center gap-2 p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all bg-white dark:bg-slate-900 text-slate-500 hover:text-blue-500 font-bold text-sm">
+                        <i class="fas fa-sun text-yellow-500"></i> Light
+                    </button>
+                    <button id="mobile-dark-btn" onclick="setTheme('dark')" class="flex items-center justify-center gap-2 p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all bg-white dark:bg-slate-900 text-slate-500 hover:text-blue-500 font-bold text-sm">
+                        <i class="fas fa-moon text-blue-500"></i> Dark
+                    </button>
+                </div>
+            </div>
+
+            <a href="catalog.html" class="mt-2 w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 text-center transition-all active:scale-95">
+                Browse Shop
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-24 md:pt-32 relative z-10 container mx-auto px-4 md:px-6 py-12">
+        
+        <div class="text-[10px] md:text-xs text-slate-500 mb-6 flex items-center gap-2 animate-fade-in-up">
+            <a href="catalog.html" class="hover:text-blue-500">Templates</a> <i class="fas fa-chevron-right text-[8px]"></i>
+            <span class="text-slate-400">AdminPro v2</span>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8 md:gap-10 animate-fade-in-up" style="animation-delay: 100ms;">
+            
+            <div class="lg:col-span-2">
+                <div class="glass rounded-3xl p-2 mb-8">
+                    <div class="rounded-2xl overflow-hidden aspect-video bg-black relative group flex items-center justify-center text-slate-500">
+                        <i class="fab fa-youtube text-5xl opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer text-red-600"></i>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h1 class="text-2xl md:text-3xl font-extrabold mb-4 leading-tight">AdminPro v2 - Analytics Dashboard Kit</h1>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold rounded-full">Tailwind CSS v3.4</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-xs font-bold rounded-full">HTML5</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-bold rounded-full">Alpine.js Ready <i class="fas fa-check-circle ml-1"></i></span>
+                    </div>
+                </div>
+
+                <div class="border-b border-slate-200 dark:border-slate-700 mb-6 overflow-x-auto">
+                    <div class="flex gap-8 min-w-max">
+                        <button class="pb-3 border-b-2 border-blue-500 font-bold text-blue-500">Overview</button>
+                        <button class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-300 transition">File Structure</button>
+                        <button class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-300 transition">Reviews (24)</button>
+                    </div>
+                </div>
+
+                <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 mb-10 text-sm md:text-base">
+                    <p>The ultimate admin dashboard template for data-heavy applications. Built with semantic HTML and Tailwind CSS, keeping the codebase clean and bloat-free.</p>
+                    <h4 class="font-bold text-lg mt-4 mb-2 text-slate-900 dark:text-white">Included Pages:</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong>Dashboard Analytics:</strong> Charts, Graphs, and KPIs.</li>
+                        <li><strong>E-Commerce:</strong> Product List, Add Product, Orders, Invoice.</li>
+                        <li><strong>Authentication:</strong> Login, Register, Forgot Password, Lock Screen.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-10">
+                    <h3 class="font-bold text-lg mb-4">File Structure</h3>
+                    <div class="glass rounded-xl p-4 font-mono text-sm text-slate-600 dark:text-slate-400 border-l-4 border-blue-500 overflow-x-auto max-h-80 overflow-y-auto custom-scrollbar">
+                        <div class="min-w-[300px] space-y-1">
+                            <div class="flex items-center gap-2 text-slate-900 dark:text-slate-200 font-bold"><i class="fas fa-folder-open text-blue-500"></i> admin-pro-v2</div>
+                            
+                            <div class="ml-4">
+                                <div class="flex items-center gap-2"><i class="fas fa-folder text-blue-400"></i> src</div>
+                                <div class="ml-4 border-l border-slate-300 dark:border-slate-700 pl-3">
+                                    <div class="flex items-center gap-2"><i class="fas fa-folder text-blue-400"></i> css</div>
+                                    <div class="ml-4 border-l border-slate-300 dark:border-slate-700 pl-3">
+                                        <div class="flex items-center gap-2 text-blue-500"><i class="fab fa-css3"></i> tailwind.css</div>
+                                        <div class="flex items-center gap-2 text-blue-500"><i class="fab fa-css3"></i> custom.css</div>
+                                    </div>
+                                    <div class="flex items-center gap-2"><i class="fas fa-folder text-blue-400"></i> pages</div>
+                                    <div class="ml-4 border-l border-slate-300 dark:border-slate-700 pl-3">
+                                        <div class="flex items-center gap-2 text-orange-500"><i class="fab fa-html5"></i> dashboard.html</div>
+                                        <div class="flex items-center gap-2 text-orange-500"><i class="fab fa-html5"></i> analytics.html</div>
+                                        <div class="flex items-center gap-2 text-orange-500"><i class="fab fa-html5"></i> settings.html</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="ml-4 flex items-center gap-2 text-red-400"><i class="fas fa-cog"></i> package.json</div>
+                            <div class="ml-4 flex items-center gap-2 text-slate-500"><i class="fas fa-file"></i> README.md</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 animate-fade-in-up" style="animation-delay: 200ms;">
+                    <div class="flex items-end justify-between mb-6">
+                        <div>
+                            <h3 class="font-bold text-lg">Reviews <span class="text-slate-500 text-sm font-normal">(24)</span></h3>
+                            <div class="flex items-center gap-1 text-yellow-400 text-sm mt-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="text-slate-900 dark:text-white font-bold ml-1">5.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="glass p-5 rounded-xl hover:scale-[1.02] hover:shadow-xl transition-all duration-300 group cursor-default">
+                            <div class="flex justify-between items-start mb-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xs shadow-md">MD</div>
+                                    <div>
+                                        <h4 class="font-bold text-sm group-hover:text-blue-500 transition-colors">Marcus D.</h4>
+                                        <p class="text-[10px] text-slate-500">Frontend Dev • Feb 2026</p>
+                                    </div>
+                                </div>
+                                <div class="text-yellow-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                "The cleanest HTML code I've seen in a template. Saved me about 2 weeks of work on my SaaS project."
+                            </p>
+                            <button onclick="toggleLike(this)" class="flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-red-500 transition-colors group/btn">
+                                <i class="far fa-heart group-hover/btn:scale-125 transition-transform duration-200"></i> <span>Helpful?</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-1">
+                <div class="glass rounded-3xl p-6 lg:sticky lg:top-28 shadow-2xl shadow-blue-900/10 border border-blue-500/30">
+                    <div class="text-5xl font-extrabold text-slate-900 dark:text-white mb-6">$49<span class="text-lg text-slate-500 font-normal">.00</span></div>
+                    
+                    <a href="#" class="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold rounded-xl shadow-lg transform active:scale-95 transition-all mb-4 flex items-center justify-center gap-2">
+                        Get License <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <div class="text-center text-xs text-slate-500 mb-6">
+                        <p class="mb-2">Secure Payment via Lemon Squeezy</p>
+                        <div class="flex justify-center gap-3 text-2xl text-slate-400">
+                            <i class="fas fa-wallet hover:text-blue-500 transition-colors"></i>
+                            <i class="fab fa-cc-mastercard hover:text-orange-500 transition-colors"></i>
+                            <i class="fab fa-cc-visa hover:text-blue-700 transition-colors"></i>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-blue-600"><i class="fas fa-layer-group"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-500">License Type</p>
+                                <p class="font-bold text-sm">Commercial Standard <i class="fas fa-check-circle text-blue-500 text-xs"></i></p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-500">
+                            <li>• Use for Personal or Commercial projects</li>
+                            <li>• Unlimited Projects</li>
+                            <li>• Free Updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md relative z-10 animate-fade-in-up" style="animation-delay: 500ms;">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <a href="index.html" class="text-2xl font-extrabold tracking-tighter flex items-center gap-2 group">
+                        <img src="https://placehold.co/100x100/2563eb/ffffff?text=Z" alt="Logo" class="w-8 h-8 rounded-lg group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-blue-500/20">
+                        <div>Zero<span class="text-blue-600 dark:text-blue-400">Bloat</span>UI</div>
+                    </a>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Premium Tailwind and Bootstrap CSS templates for modern startups. Save hundreds of hours on UI development.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-slate-400 hover:text-blue-600 transition-all duration-300 hover:-translate-y-1"><i class="fab fa-twitter text-lg"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-300 hover:-translate-y-1"><i class="fab fa-github text-lg"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-blue-500 transition-all duration-300 hover:-translate-y-1"><i class="fab fa-discord text-lg"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Products</h4>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a href="catalog.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">All Templates</a></li>
+                        <li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Free Kits</a></li>
+                        <li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Figma Assets</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Support</h4>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Help Center</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Documentation</a></li>
+                        <li><a href="license.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">License Terms</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Legal</h4>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Terms of Service</a></li>
+                        <li><a href="refund.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-xs text-slate-500 text-center md:text-left flex items-center gap-1">
+                    &copy; 2026 Zero Bloat UI. Designed in Manila.
+                </div>
+                <div class="flex gap-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <i class="fab fa-cc-visa text-2xl text-slate-600 dark:text-slate-300"></i>
+                    <i class="fab fa-cc-mastercard text-2xl text-slate-600 dark:text-slate-300"></i>
+                    <i class="fab fa-paypal text-2xl text-blue-500"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
