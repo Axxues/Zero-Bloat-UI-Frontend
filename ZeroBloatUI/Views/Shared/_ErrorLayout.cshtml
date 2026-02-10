@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | CodeCrate PH</title>
+
+    <link href="~/assets/css/fonts.css" rel="stylesheet">
+    <link href="~/assets/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col items-center justify-center relative text-center px-4">
+
+    @RenderBody()
+
+    <div class="absolute bottom-1 text-[10px] md:text-xs text-slate-400 animate-fade-in-up" style="animation-delay: 500ms;">
+        &copy; 2026 Zero Bloat UI
+    </div>
+
+    <script src="~/assets/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

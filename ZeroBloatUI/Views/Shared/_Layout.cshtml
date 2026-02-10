@@ -19,7 +19,7 @@
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
-            <a asp-controller="Home" asp-action="Index" class="text-2xl font-extrabold tracking-tighter flex items-center gap-2 group">
+            <a asp-controller="Home" asp-action="Home" class="text-2xl font-extrabold tracking-tighter flex items-center gap-2 group">
                 <img src="https://placehold.co/100x100/2563eb/ffffff?text=Z" alt="Logo" class="w-8 h-8 rounded-lg group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-blue-500/20">
                 <div>Zero<span class="text-blue-600 dark:text-blue-400">Bloat</span>UI</div>
             </a>
@@ -42,13 +42,13 @@
 
                     if (ViewData["Title"] == "Templates")
                     {
-                        <a href="catalog.html" class="relative group py-1">
+                        <a asp-controller="Project" asp-action="Index" class="relative group py-1">
                             <span class="text-blue-600 dark:text-blue-400 font-bold transition-colors duration-300">Templates</span>
                             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300"></span>
                         </a>
                     } else
                     {
-                        <a href="catalog.html" class="relative group py-1">
+                        <a asp-controller="Project" asp-action="Index" class="relative group py-1">
                             <span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Templates</span>
                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                         </a>
@@ -56,14 +56,14 @@
 
                     if (ViewData["Title"] == "Documentation")
                     {
-                        <a href="how-it-works.html" class="relative group py-1">
+                        <a asp-controller="Home" asp-action="HowItWorks" class="relative group py-1">
                             <span class="text-blue-600 dark:text-blue-400 font-bold transition-colors duration-300">Documentation</span>
                             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300"></span>
                         </a>
                     }
                     else
                     {
-                        <a href="how-it-works.html" class="relative group py-1">
+                        <a asp-controller="Home" asp-action="HowItWorks" class="relative group py-1">
                             <span class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Documentation</span>
                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                         </a>
@@ -90,7 +90,7 @@
                 <button onclick="toggleTheme()" class="w-9 h-9 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center transition hover:scale-110">
                     <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block"></i>
                 </button>
-                <a href="catalog.html" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-full transition shadow-lg shadow-blue-500/30 hover:-translate-y-0.5">Browse Shop</a>
+                <a asp-controller="Project" asp-action="Index" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-full transition shadow-lg shadow-blue-500/30 hover:-translate-y-0.5">Browse Shop</a>
             </div>
 
             <button class="lg:hidden text-2xl text-slate-700 dark:text-slate-200 focus:outline-none" onclick="toggleMobileMenu()">
@@ -119,7 +119,7 @@
 
                 if (ViewData["Title"] == "Templates")
                 {
-                    <a href="catalog.html" class="flex items-center gap-4 p-3 rounded-xl bg-purple-50 dark:bg-purple-900/20 border border-purple-500/30 transition-colors group shadow-sm">
+                    <a asp-controller="Project" asp-action="Index" class="flex items-center gap-4 p-3 rounded-xl bg-purple-50 dark:bg-purple-900/20 border border-purple-500/30 transition-colors group shadow-sm">
                         <div class="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i class="fas fa-layer-group"></i>
                         </div>
@@ -128,7 +128,7 @@
                 }
                 else
                 {
-                    <a href="catalog.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+                    <a asp-controller="Project" asp-action="Index" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
                         <div class="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-layer-group"></i></div>
                         <span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-purple-600 dark:group-hover:text-purple-400">Templates</span>
                     </a>
@@ -136,7 +136,7 @@
 
                 if (ViewData["Title"] == "Documentation")
                 {
-                    <a href="how-it-works.html" class="flex items-center gap-4 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-500/30 transition-colors group shadow-sm">
+                    <a asp-controller="Home" asp-action="HowItWorks" class="flex items-center gap-4 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-500/30 transition-colors group shadow-sm">
                         <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                             <i class="fas fa-book"></i>
                         </div>
@@ -145,7 +145,7 @@
                 }
                 else
                 {
-                    <a href="how-it-works.html" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
+                    <a asp-controller="Home" asp-action="HowItWorks" class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors group">
                         <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform"><i class="fas fa-book"></i></div>
                         <span class="font-bold text-slate-700 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">Documentation</span>
                     </a>
@@ -182,7 +182,7 @@
                 </div>
             </div>
 
-            <a href="catalog.html" class="mt-2 w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 text-center transition-all active:scale-95">
+            <a asp-controller="Project" asp-action="Index" class="mt-2 w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 text-center transition-all active:scale-95">
                 Browse Shop
             </a>
         </div>
@@ -213,7 +213,7 @@
                 <div>
                     <h4 class="font-bold text-slate-900 dark:text-white mb-6">Products</h4>
                     <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-                        <li><a href="catalog.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">All Templates</a></li>
+                        <li><a asp-controller="Project" asp-action="Index" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">All Templates</a></li>
                         <li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Free Kits</a></li>
                         <li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Figma Assets</a></li>
                     </ul>
@@ -223,17 +223,17 @@
                     <h4 class="font-bold text-slate-900 dark:text-white mb-6">Support</h4>
                     <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
                         <li><a asp-controller="Home" asp-action="Contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Help Center</a></li>
-                        <li><a href="how-it-works.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Documentation</a></li>
-                        <li><a href="license.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">License Terms</a></li>
+                        <li><a asp-controller="Home" asp-action="HowItWorks" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Documentation</a></li>
+                        <li><a asp-controller="Home" asp-action="License" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">License Terms</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-bold text-slate-900 dark:text-white mb-6">Legal</h4>
                     <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
-                        <li><a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Terms of Service</a></li>
-                        <li><a href="refund.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Refund Policy</a></li>
+                        <li><a asp-controller="Home" asp-action="Privacy" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Privacy Policy</a></li>
+                        <li><a asp-controller="Home" asp-action="Terms" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Terms of Service</a></li>
+                        <li><a asp-controller="Home" asp-action="Refund" class="hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:translate-x-1 inline-block duration-200">Refund Policy</a></li>
                     </ul>
                 </div>
             </div>

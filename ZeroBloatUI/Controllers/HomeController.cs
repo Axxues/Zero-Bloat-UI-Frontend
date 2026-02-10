@@ -6,7 +6,13 @@ namespace ZeroBloatUI.Controllers
 {
     public class HomeController : Controller
     {
+
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult HowItWorks()
         {
             return View();
         }
@@ -16,7 +22,22 @@ namespace ZeroBloatUI.Controllers
             return View();
         }
 
+        public IActionResult License()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Terms()
+        {
+            return View();
+        }
+
+        public IActionResult Refund()
         {
             return View();
         }

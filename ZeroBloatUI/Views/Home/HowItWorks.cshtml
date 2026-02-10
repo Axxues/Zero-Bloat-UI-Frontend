@@ -1,0 +1,135 @@
+﻿@{
+    ViewData["Title"] = "Documentation";
+}
+
+<section class="text-center mb-16 animate-fade-in-up">
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-4">How to use our <span class="text-blue-600 dark:text-blue-400">Templates</span></h1>
+    <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+        Getting started is easy. All our templates follow a standard structure and use pure Tailwind CSS with no complex build steps required.
+    </p>
+</section>
+
+<div class="grid lg:grid-cols-12 gap-12">
+
+    <div class="lg:col-span-7 space-y-8">
+
+        <div class="group flex gap-6 animate-fade-in-up hover:-translate-y-1 transition-transform duration-300" style="animation-delay: 100ms;">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center font-bold text-xl border border-blue-200 dark:border-blue-800 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-lg shadow-blue-500/20">1</div>
+            <div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Download & Unzip</h3>
+                <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                    After purchasing via Lemon Squeezy, you will receive a <code class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm font-mono border border-slate-200 dark:border-slate-700">.zip</code> file. Extract this folder to your desired project location.
+                </p>
+                <div class="glass p-4 rounded-xl border-l-4 border-emerald-500 text-sm text-slate-600 dark:text-slate-300 shadow-sm group-hover:shadow-md transition-shadow">
+                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i> <strong>Tip:</strong> Keep a backup of the original .zip file before making edits.
+                </div>
+            </div>
+        </div>
+
+        <div class="group flex gap-6 animate-fade-in-up hover:-translate-y-1 transition-transform duration-300" style="animation-delay: 200ms;">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center font-bold text-xl border border-blue-200 dark:border-blue-800 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-lg shadow-blue-500/20">2</div>
+            <div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Open in VS Code</h3>
+                <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                    Open the extracted folder in your code editor. We recommend Visual Studio Code with the "Tailwind CSS IntelliSense" extension installed for the best experience.
+                </p>
+            </div>
+        </div>
+
+        <div class="group flex gap-6 animate-fade-in-up hover:-translate-y-1 transition-transform duration-300" style="animation-delay: 300ms;">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center font-bold text-xl border border-blue-200 dark:border-blue-800 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-lg shadow-blue-500/20">3</div>
+            <div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Customize Colors & Fonts</h3>
+                <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                    We use the standard CDN method for Tailwind so you can edit immediately. To customize the theme, open <code class="text-pink-500 font-mono">tailwind.config.js</code> inside the assets folder.
+                </p>
+                <div class="glass p-5 rounded-xl font-mono text-xs md:text-sm overflow-x-auto bg-slate-900 text-slate-300 border border-slate-700 shadow-inner group-hover:border-blue-500/30 transition-colors">
+                    <span class="text-purple-400">theme:</span> {<br>
+                    &nbsp;&nbsp;<span class="text-purple-400">extend:</span> {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">colors:</span> {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-400">primary:</span> <span class="text-green-400">'#2563eb'</span>, <span class="text-slate-500">// Change this hex code</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="lg:col-span-5 space-y-8 animate-fade-in-up" style="animation-delay: 400ms;">
+
+        <div class="glass p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-500 group">
+            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                <div class="w-8 h-8 rounded bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-500 group-hover:rotate-12 transition-transform duration-300">
+                    <i class="fas fa-folder-open"></i>
+                </div>
+                Folder Structure
+            </h3>
+            <div class="font-mono text-sm text-slate-600 dark:text-slate-400 space-y-2 border-l border-slate-200 dark:border-slate-700 ml-2 pl-4">
+                <div class="flex items-center gap-2 group/item hover:text-blue-500 transition-colors"><i class="fas fa-folder text-blue-400"></i> assets</div>
+                <div class="ml-4 border-l border-slate-200 dark:border-slate-700 pl-4 space-y-2">
+                    <div class="flex items-center gap-2 hover:text-blue-500 transition-colors"><i class="fas fa-folder text-blue-400"></i> css</div>
+                    <div class="flex items-center gap-2 hover:text-blue-500 transition-colors"><i class="fas fa-folder text-blue-400"></i> img</div>
+                    <div class="flex items-center gap-2 hover:text-blue-500 transition-colors"><i class="fas fa-folder text-blue-400"></i> js</div>
+                </div>
+                <div class="flex items-center gap-2 text-orange-500 font-bold"><i class="fab fa-html5"></i> index.html</div>
+                <div class="flex items-center gap-2 text-orange-500"><i class="fab fa-html5"></i> catalog.html</div>
+                <div class="flex items-center gap-2 text-orange-500"><i class="fab fa-html5"></i> details.html</div>
+                <div class="flex items-center gap-2 text-slate-400"><i class="fas fa-file-code"></i> README.md</div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="font-bold text-lg mb-4">Common Questions</h3>
+            <div class="space-y-4">
+
+                <details class="group glass rounded-xl overflow-hidden cursor-pointer open:ring-2 open:ring-blue-500/20 transition-all duration-300">
+                    <summary class="flex justify-between items-center p-4 font-semibold select-none hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors">
+                        <span>Do I need to install Node.js?</span>
+                        <i class="fas fa-chevron-down text-slate-400 text-xs transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="p-4 pt-0 text-sm text-slate-500 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-700/50 mt-2 pt-4">
+                            No! Our templates use the Tailwind CSS CDN scripts by default, so they work instantly in any browser without installation.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="group glass rounded-xl overflow-hidden cursor-pointer open:ring-2 open:ring-blue-500/20 transition-all duration-300">
+                    <summary class="flex justify-between items-center p-4 font-semibold select-none hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors">
+                        <span>Can I use this with React/Vue?</span>
+                        <i class="fas fa-chevron-down text-slate-400 text-xs transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="p-4 pt-0 text-sm text-slate-500 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-700/50 mt-2 pt-4">
+                            Yes. Since the code is plain HTML/CSS, you can copy the classes and structure directly into your React components or Vue templates easily.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="group glass rounded-xl overflow-hidden cursor-pointer open:ring-2 open:ring-blue-500/20 transition-all duration-300">
+                    <summary class="flex justify-between items-center p-4 font-semibold select-none hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors">
+                        <span>Is the license lifetime?</span>
+                        <i class="fas fa-chevron-down text-slate-400 text-xs transition-transform duration-300 group-open:rotate-180"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="p-4 pt-0 text-sm text-slate-500 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-700/50 mt-2 pt-4">
+                            Absolutely. One-time payment, lifetime access, and you get all future updates for free. No subscription fees ever.
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="mt-20 glass p-8 rounded-3xl text-center animate-fade-in-up bg-gradient-to-r from-blue-50/50 to-purple-50/50 dark:from-blue-900/20 dark:to-purple-900/20 border border-white/20" style="animation-delay: 500ms;">
+    <h2 class="text-2xl font-bold mb-2">Still stuck?</h2>
+    <p class="text-slate-500 dark:text-slate-400 mb-6">Our support team is ready to help you with integration issues.</p>
+    <a asp-controller="Home" asp-action="Contact" class="px-8 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-xl hover:scale-105 transition-all shadow-lg inline-flex items-center gap-2 hover:shadow-xl hover:shadow-blue-500/20">
+        <i class="fas fa-headset"></i> Contact Support
+    </a>
+</div>
